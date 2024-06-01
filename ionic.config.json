@@ -1,0 +1,7 @@
+{
+  "name": "PocketM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
