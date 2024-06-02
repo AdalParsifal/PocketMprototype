@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class HomePage implements OnInit {
   homeForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private navCtrl: NavController) {}
 
   ngOnInit() {
     this.homeForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
 
@@ -22,7 +23,7 @@ export class HomePage implements OnInit {
     if (this.homeForm.valid) {
       const loginData = this.homeForm.value;
       console.log('Login successful with data:', loginData);
-      
+      this.navCtrl.navigateForward('/hall');
     }
   }
 }

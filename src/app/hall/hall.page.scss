@@ -1,21 +1,13 @@
 @import "~animate.css/animate.min.css";
-.gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  ion-card {
-    width: 80%;
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  .wide-card {
-    width: 90%;
-  }
-  
-  .animate__animated.animate__fadeIn {
-    animation-duration: 1s;
-  }
+
+ion-card {
+  text-align: center;
+}
+
+ion-button {
+  width: 100%;
+}
+
+.animate__animated.animate__fadeIn {
+  animation-duration: 1s;
+}

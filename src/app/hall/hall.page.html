@@ -7,23 +7,31 @@
 <ion-content class="ion-padding">
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
 
-  <div class="gallery-container">
-    <ion-card>
-      <ion-card-content>
-        <ion-button expand="block" routerLink="/galeria-internacional" class="animate__animated animate__fadeIn">Galeria Internacional</ion-button>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-content>
-        <ion-button expand="block" routerLink="/galeria-nacional" class="animate__animated animate__fadeIn">Galeria Nacional</ion-button>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card class="wide-card">
-      <ion-card-content>
-        <ion-button expand="block" routerLink="/arqueologia" class="animate__animated animate__fadeIn">Arqueologia</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/galeria-internacional" class="animate__animated animate__fadeIn">Galeria Internacional</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/galeria-nacional" class="animate__animated animate__fadeIn">Galeria Nacional</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <ion-button expand="block" routerLink="/arqueologia" class="animate__animated animate__fadeIn">Arqueologia</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
