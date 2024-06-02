@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'hall',
+    loadChildren: () => import('./hall/hall.module').then( m => m.HallPageModule)
   },
+
 ];
 
 @NgModule({
