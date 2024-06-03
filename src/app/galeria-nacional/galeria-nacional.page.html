@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content>
-  <swiper-container [pagination]="{ clickable: true }" [navigation]="true" class="mySwiper" [modules]="swiperModules">
-    <swiper-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" />
+  <swiper-container [pagination]="{ clickable: true }" [navigation]="true" class="swiper">
+    <swiper-slide *ngFor="let slide of slides" class="slide-container">
+      <img [src]="slide.image" alt="Slide Image" class="zoomable-image" />
       <h2>{{ slide.title }}</h2>
     </swiper-slide>
   </swiper-container>
