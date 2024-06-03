@@ -1,13 +1,14 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>GaleriaNacional</ion-title>
+    <ion-title>Galeria Nacional</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">GaleriaNacional</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <swiper-container [pagination]="{ clickable: true }" [navigation]="true" class="mySwiper" [modules]="swiperModules">
+    <swiper-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" />
+      <h2>{{ slide.title }}</h2>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
