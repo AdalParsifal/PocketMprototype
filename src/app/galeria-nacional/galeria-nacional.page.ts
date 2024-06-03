@@ -20,13 +20,31 @@ export class GaleriaNacionalPage implements OnInit {
   toggleZoom(swiperSlide: any) {
     const swiper = (swiperSlide.target as HTMLElement).closest('swiper-container')?.swiper as Swiper;
     if (swiper) {
+      const nextButton = swiper.el.querySelector('.swiper-button-next') as HTMLElement;
+      const prevButton = swiper.el.querySelector('.swiper-button-prev') as HTMLElement;
+      const paginationBullets = swiper.el.querySelector('.swiper-pagination') as HTMLElement;
+  
       if (swiper.zoom.enabled) {
         swiper.zoom.out();
         swiper.zoom.disable();
+        if (nextButton && prevButton) {
+          nextButton.style.display = 'block';
+          prevButton.style.display = 'block';
+        }
+        if (paginationBullets) {
+          paginationBullets.style.display = 'block';
+        }
       } else {
         swiper.zoom.enable();
         swiper.zoom.in();
+        if (nextButton && prevButton) {
+          nextButton.style.display = 'none';
+          prevButton.style.display = 'none';
+        }
+        if (paginationBullets) {
+          paginationBullets.style.display = 'none';
+        }
       }
     }
-  }
+  }  
 }

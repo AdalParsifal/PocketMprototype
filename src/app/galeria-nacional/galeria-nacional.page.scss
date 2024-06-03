@@ -48,8 +48,7 @@ ion-content {
   align-items: center;
 }
 
-.swiper-container-zoomed .swiper-button-next,
-.swiper-container-zoomed .swiper-button-prev
-.swiper-container-zoomed .swiper-pagination {
+.hidden-navigation {
+  opacity: 0;
   display: none !important;
 }
