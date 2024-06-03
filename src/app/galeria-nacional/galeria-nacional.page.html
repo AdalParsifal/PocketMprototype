@@ -5,10 +5,25 @@
 </ion-header>
 
 <ion-content>
-  <swiper-container [pagination]="{ clickable: true }" [navigation]="true" class="swiper">
-    <swiper-slide *ngFor="let slide of slides" class="slide-container">
-      <img [src]="slide.image" alt="Slide Image" class="zoomable-image" />
+  <swiper-container
+    [zoom]="true"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+    class="mySwiper"
+  >
+    <swiper-slide *ngFor="let slide of slides" (click)="toggleZoom($event)">
+      <div class="swiper-zoom-container">
+        <img [src]="slide.image" [alt]="slide.title">
+      </div>
       <h2>{{ slide.title }}</h2>
+      <p>{{ slide.description }}</p>
     </swiper-slide>
   </swiper-container>
 </ion-content>
+
+
+
+
+
+
+
