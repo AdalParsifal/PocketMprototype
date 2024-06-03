@@ -1,0 +1,28 @@
+ion-content {
+    --background: #ffffff;
+  }
+  
+  ion-title {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  ion-grid {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-card {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-height: 100px;
+      object-fit: cover;
+    }
+  }
+  
+  ion-searchbar {
+    margin: 8px;
+  }

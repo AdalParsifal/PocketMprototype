@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>GaleriaInternacional</ion-title>
+    <ion-title>Galeria Internacional</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">GaleriaInternacional</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Buscar" (ionInput)="filterGalerias($event)"></ion-searchbar>
+
+  <ion-title>Novedades</ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let novedad of novedades">
+        <ion-card>
+          <img [src]="novedad.image" />
+          <ion-card-header>
+            <ion-card-title>{{ novedad.title }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-title>Galerias</ion-title>
+  <ion-list>
+    <ion-item *ngFor="let galeria of galerias">
+      <ion-label>{{ galeria }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
