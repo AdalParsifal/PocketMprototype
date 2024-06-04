@@ -11,5 +11,8 @@ export class ArqueologiaPage implements OnInit {
 
   ngOnInit() {
   }
+  navigateTo(gallery: string) {
+    alert(`Navegar a la galería de ${gallery}`); // Aquí puedes implementar la lógica de navegación real
+  }
 
 }

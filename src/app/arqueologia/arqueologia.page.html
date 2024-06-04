@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Arqueologia</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-header>
     <ion-toolbar>
-      <ion-title size="large">Arqueologia</ion-title>
+      <ion-title>Arqueología</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  
+  <ion-content>
+    <div class="container">
+      <button class="gallery-button" (click)="navigateTo('Imperio Inca')">Imperio Inca</button>
+      <button class="gallery-button" (click)="navigateTo('Egipto Ptolemaico')">Egipto Ptolemaico</button>
+      <button class="gallery-button" (click)="navigateTo('Grecia Clásica')">Grecia Clásica</button>
+    </div>
+  </ion-content>
