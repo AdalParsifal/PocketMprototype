@@ -1,0 +1,19 @@
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+  }
+  
+  .scroll-content {
+    display: flex;
+  }
+  
+  ion-button {
+    flex: 0 0 auto; /* Asegúrate de que los botones no se reduzcan o expandan */
+    margin: 0 5px; /* Espaciado entre los botones */
+  }
+  
+  /* Opcional: Ocultar la barra de desplazamiento en WebKit (Safari, Chrome) */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }

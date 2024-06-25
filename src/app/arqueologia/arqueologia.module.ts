@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ArqueologiaPageRoutingModule } from './arqueologia-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
 import { ArqueologiaPage } from './arqueologia.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ArqueologiaPage } from './arqueologia.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ArqueologiaPageRoutingModule
+    ArqueologiaPageRoutingModule,
+    SharedModule 
   ],
   declarations: [ArqueologiaPage]
 })

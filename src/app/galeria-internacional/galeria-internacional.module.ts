@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { GaleriaInternacionalPageRoutingModule } from './galeria-internacional-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
 import { GaleriaInternacionalPage } from './galeria-internacional.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { GaleriaInternacionalPage } from './galeria-internacional.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    GaleriaInternacionalPageRoutingModule
+    GaleriaInternacionalPageRoutingModule,
+    SharedModule 
   ],
   declarations: [GaleriaInternacionalPage]
 })

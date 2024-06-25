@@ -1,0 +1,26 @@
+<ion-footer>
+  <ion-toolbar>
+    <div class="scroll-container">
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons class="scroll-content" slot="end">
+        <ion-button [routerLink]="['/galeria-internacional']">
+          Galería Internacional
+        </ion-button>
+        <ion-button [routerLink]="['/galeria-nacional']">
+          Galería Nacional
+        </ion-button>
+        <ion-button [routerLink]="['/arqueologia']">
+          Arqueología
+        </ion-button>
+        <ion-button [routerLink]="['/hall']">
+          Hall
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-footer>
