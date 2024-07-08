@@ -1,8 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -12,18 +7,20 @@
   </ion-header>
 
   <div class="home-container">
-    <form (ngSubmit)="onSubmit()" [formGroup]="homeForm">
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" formControlName="email"></ion-input>
-      </ion-item>
-      
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" formControlName="password"></ion-input>
-      </ion-item>
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit()" [formGroup]="homeForm">
+        <ion-item class="form-item">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        
+        <ion-item class="form-item">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
 
-      <ion-button expand="full" type="submit" [disabled]="!homeForm.valid">Login</ion-button>
-    </form>
+        <ion-button expand="full" type="submit" [disabled]="!homeForm.valid">Login</ion-button>
+      </form>
+    </div>
   </div>
 </ion-content>

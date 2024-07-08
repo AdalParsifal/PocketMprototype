@@ -1,14 +1,23 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 16px;
+  background-image: url('/assets/images/Home/Palace.jpg'); /* Update the path to the image */
+  background-size: contain;
+  
+  background-position: center;
+  height: 100vh; /* Make sure the container takes full height */
 }
 
-ion-item {
+.form-item {
+  background: rgb(255, 255, 255); /* Semi-transparent background for form fields */
+  border-radius: 8px;
+  padding: 8px;
   margin-bottom: 16px;
 }
 
-ion-button {
+.ion-button {
+  color: #ffa600;
   margin-top: 16px;
 }
