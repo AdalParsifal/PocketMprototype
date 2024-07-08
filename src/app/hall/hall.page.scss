@@ -1,4 +1,13 @@
 @import "~animate.css/animate.min.css";
+ion-content {
+  --background: url('/assets/images/Home/Hall2.jpg') no-repeat center center / cover; /* Update the path to the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center;
+  padding: 16px;
+  height: 100vh; /* Ensure the container takes full height */
+}
 
 ion-card {
   text-align: center;
